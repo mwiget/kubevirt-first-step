@@ -369,9 +369,12 @@ spec:
     image: alpine
 ```
 
+```
 $ kubectl apply -f alpine.yml
 pod/samplepod created
+```
 
+```
 $ kubectl get pods
 NAME        READY   STATUS    RESTARTS   AGE
 samplepod   1/1     Running   0          17s
@@ -388,7 +391,6 @@ eth0      Link encap:Ethernet  HWaddr 0A:58:0A:F4:00:09
           TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
           collisions:0 txqueuelen:0
           RX bytes:1160 (1.1 KiB)  TX bytes:0 (0.0 B)
-
 ```
 
 Or launch a shell in the samplepod alpine container for interactive use:
@@ -456,6 +458,7 @@ spec:
         chpasswd: { expire: False }
 ```
 
+```
 $ kubectl apply -f fedora-vm.yml
 virtualmachineinstance.kubevirt.io/testvmi-nocloud created
 ```
